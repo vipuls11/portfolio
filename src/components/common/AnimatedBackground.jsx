@@ -4,13 +4,13 @@ const AnimatedBackground = () => {
   const particles = Array.from({ length: 15 }); // Reduced for better performance
 
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none transition-colors duration-500">
+    <div className="fixed inset-0 z-10 overflow-hidden pointer-events-none transition-colors duration-500">
       
       {/* 1. Static Dotted Grid (Adapts automatically) */}
       <div 
         className="animated-grid-dots absolute inset-0 opacity-[0.2] dark:opacity-[0.07]"
         style={{
-          backgroundImage: `radial-gradient(#6366f1 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(#6366f1 1px, transparent 1px) !imporrtant`,
           backgroundSize: '40px 40px',
         }}
       />
@@ -19,7 +19,7 @@ const AnimatedBackground = () => {
       {particles.map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-1 h-1 bg-purple-500/40 dark:bg-purple-400/30 rounded-full"
+          className="absolute w-1.5 h-1.5 bg-purple-500/40 dark:bg-purple-100/30 rounded-full"
           initial={{
             x: Math.random() * window.innerWidth,
             y: Math.random() * window.innerHeight,
