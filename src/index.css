@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Custom OpenClaw Theme Variables */
+  --font-heading: "Bebas Neue", sans-serif;
+  --font-body: "Inter", sans-serif;
+  
+  --color-openclaw-bg: #f8f9fa;
+  --color-openclaw-accent: #7c3aed;
+  
+  --shadow-depth: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+}
+
+
+@layer base {
+  :root {
+    --bg-color: #f8f9fa;
+    --text-color: #0f172a;
+    --card-bg: rgba(255, 255, 255, 0.7);
+  }
+
+  .dark {
+    --bg-color: #050810; /* Very dark blue */
+    --text-color: #f8f9fa;
+    --card-bg: rgba(15, 23, 42, 0.7);
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    @apply transition-colors duration-300;
+  }
+    h1, h2, h3 {
+    @apply font-heading tracking-wider;
+  }
+  .dark .animated-grid-dots {
+  opacity: 0.05;
+  background-image: radial-gradient(#818cf8 1px, transparent 1px) !important;
+}
+}
