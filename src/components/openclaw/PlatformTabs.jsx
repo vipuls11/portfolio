@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const tabs = ['Frontend', 'Backend', 'Tools'];
+const tabs = ['Frontend', 'Backend', 'Tools',];
 
 const PlatformTabs = ({ data }) => {
   const [activeTab, setActiveTab] = useState('Frontend');

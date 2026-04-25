@@ -147,37 +147,46 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div 
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="absolute top-full left-0 w-full bg-white/95 backdrop-blur-2xl border-b border-slate-100 overflow-hidden md:hidden shadow-2xl"
-          >
-            <div className="flex flex-col p-8 gap-6">
-              {navLinks.map((link) => (
-                <a 
-                  key={link.name} 
-                  href={link.path} 
-                  onClick={(e) => handleNavClick(e, link.path)}
-                  className="text-2xl font-heading text-slate-800 hover:text-purple-600 flex justify-between items-center"
-                >
-                  {link.name}
-                  <ExternalLink size={18} className="opacity-20" />
-                </a>
-              ))}
-              <div className="flex gap-6 mt-4 pt-6 border-t border-slate-100">
-                <Github className="text-slate-400" />
-                <Linkedin className="text-slate-400" />
-                  <ThemeToggle />
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
+  {/* Mobile Menu Overlay */}
+<AnimatePresence>
+  {isOpen && (
+    <motion.div 
+      initial={{ opacity: 0, height: 0 }}
+      animate={{ opacity: 1, height: 'auto' }}
+      exit={{ opacity: 0, height: 0 }}
+      className="absolute top-full left-0 w-full bg-white/95 backdrop-blur-2xl border-b border-slate-100 overflow-hidden md:hidden shadow-2xl"
+    >
+      <div className="flex flex-col p-8 gap-6">
+        {navLinks.map((link) => {
+          const sectionId = link.path.replace('/#', '');
+          const isActive = activeSection === (sectionId || 'home') && location.pathname === '/';
+          return (
+            <a 
+              key={link.name} 
+              href={link.path} 
+              onClick={(e) => handleNavClick(e, link.path)}
+              className={`text-2xl font-heading text-slate-800 hover:text-purple-600 flex justify-between items-center ${
+                isActive ? 'text-purple-600' : 'text-slate-600 dark:text-slate-400'
+              }`}
+            >
+              {link.name}
+              <ExternalLink size={18} className="opacity-20" />
+            </a>
+          );
+        })}
+        <div className="flex gap-6 mt-4 pt-6 border-t border-slate-100">
+          <a href="https://github.com/vipuls11" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <Github className="text-slate-400" />
+          </a>
+          <a href="https://www.linkedin.com/in/vipul-vishwakarma-963111211" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <Linkedin className="text-slate-400" />
+          </a>
+          <ThemeToggle />
+        </div>
+      </div>
+    </motion.div>
+  )}
+</AnimatePresence>
     
          
 

@@ -3,44 +3,53 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, Code2 } from 'lucide-react';
 import GlassCard from '../../components/openclaw/GlassCard';
 
-const categories = ['All', 'Web App', 'MERN', 'UI Design'];
+const categories = ['All', 'Web App', 'Mern', 'UI Design'];
 
 const projects = [
   {
     id: 1,
-    title: 'Society Management System',
-    category: 'MERN',
-    img: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800',
-    tags: ['React', 'Node.js', 'MongoDB', 'MUI'],
-    link: '#',
-    github: 'https://github.com/vipuls11'
+    title: 'YOUR PLACE',
+    category: 'Mern',
+    img: 'src/assets/images/mernproject.png',
+    tags: ['React', 'Node.js', 'MongoDB', 'Tailwind Css'],
+    link: 'https://udemy-learning-project-react-mern.vercel.app',
+    github: 'https://github.com/vipuls11/Udemy-learning-project-react-mern'
   },
   {
     id: 2,
-    title: 'Wok N Grill Xpress',
+    title: 'AV INFO SYSTEM',
     category: 'Web App',
-    img: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800',
-    tags: ['Vite', 'Tailwind', 'Framer Motion'],
-    link: 'https://wok-n-grill.vercel.app/',
-    github: '#'
+    img: 'src/assets/images/av-info-sytem.png',
+    tags: ['Vite', 'Tailwind'],
+    link: 'https://av-info-system-16-05-2024.vercel.app',
+    github: 'https://github.com/vipuls11/av-info-system-16-05-2024'
   },
   {
     id: 3,
-    title: 'PMKSY-WDC 2.0 Dashboard',
+    title: 'OPENCLAW AI',
     category: 'Web App',
-    img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
-    tags: ['React', 'Formik', 'Data Viz'],
-    link: '#',
-    github: '#'
+    img: 'src/assets/images/openclaw-ai.png',
+    tags: ['React', 'Material UI', 'Framer-motion'],
+    link: 'https://open-claw-ai.vercel.app/',
+    github: 'https://github.com/vipuls11/OpenClaw-AI'
   },
   {
     id: 4,
-    title: 'Interior Storefront',
+    title: 'SMART-ABACUS',
+    category: 'Web App',
+    img: 'src/assets/images/abacus.png',
+    tags: ['React', 'Tailwind', 'Slick-Carousel',],
+    link: 'https://smart-abacus.vercel.app',
+    github: 'https://github.com/vipuls11/smart-abacus'
+  },
+  {
+    id: 5,
+    title: 'Job Portal',
     category: 'UI Design',
-    img: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800',
-    tags: ['React', 'MongoDB', 'Masonry'],
-    link: '#',
-    github: '#'
+    img: 'src/assets/images/job-portal.png',
+    tags: ['React'],
+    link: 'https://job-portal-psi-lovat.vercel.app/job-preview',
+    github: 'https://github.com/vipuls11/job-portal'
   }
 ];
 

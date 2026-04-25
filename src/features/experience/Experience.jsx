@@ -5,25 +5,34 @@ import GlassCard from '../../components/openclaw/GlassCard';
 
 const workHistory = [
   {
-    company: 'Oriflamme IT Solutions',
-    role: 'FrontEnd Developer',
-    duration: '2022 - Present',
-    location: 'Mumbai',
-    description: 'Developed scalable e-commerce and real-estate platforms using React and MUI. Focused on performance optimization and responsive architecture.'
-  },
-  {
-    company: 'Jewel webnet',
+    company: 'Synergy Connect Data Innovative Pvt. Ltd.',
     role: 'UI Developer',
-    duration: '2021 - 2022',
+    duration: 'feb 2025 - Present',
     location: 'Mumbai',
-    description: 'Crafted precision jewelry storefronts and landing pages. Implemented custom animations and high-impact layouts using Tailwind CSS.'
+    description: `Designed and developed responsive, user-friendly UI for CMS websites with
+dynamic data rendered from backend APIs.mplemented fully responsive layouts with cross-browser compatibility, ensuring
+consistent UI across devices.Optimized UI performance using lazy loading, component reusability, and efficient
+rendering techniques.`
   },
   {
-    company: 'A-one employment',
+    company: 'Infozzle Software Solutions Pvt. Ltd.',
+    role: 'UI Developer',
+    duration: 'May 2024 - Sep 2024',
+    location: 'Mumbai',
+    description: `Developed custom websites tailored to client requirements, ensuring functionality and visual appeal.
+Built and customized WordPress websites, integrating themes and plugins for optimal performance. Maintained,
+debugged, tested, and troubleshooted website issues to ensure smooth operation. Optimized website performance,
+improving load times, responsiveness, and user experience.`
+  },
+  {
+    company: 'Oriflamme IT Solutions',
     role: 'Web Developer',
-    duration: '2020 - 2021',
+    duration: 'Oct 2022 - Apr 2024',
     location: 'Remote',
-    description: 'Managed full-lifecycle web projects, ensuring seamless integration between frontend design and backend functionality.'
+    description: `I developed custom websites tailored to customer requirements, ensuring both functionality and
+visual appeal. I maintained, tested, debugged, and troubleshooted websites to guarantee smooth performance and a
+seamless user experience. Additionally, I optimized the company’s official website to improve performance,
+responsiveness, and overall user engagement.kend functionality.`
   }
 ];
 

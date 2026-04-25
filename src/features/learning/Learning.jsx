@@ -1,49 +1,60 @@
-import { motion } from 'framer-motion';
-import { Award, BookOpen, CheckCircle, TrendingUp, ExternalLink } from 'lucide-react';
-import GlassCard from '../../components/openclaw/GlassCard';
+import { motion } from "framer-motion";
+import {
+  Award,
+  BookOpen,
+  CheckCircle,
+  TrendingUp,
+  ExternalLink,
+} from "lucide-react";
+import GlassCard from "../../components/openclaw/GlassCard";
 
 const certifications = [
+  // {
+  //   title: "Bachelor's of Computer Science",
+  //   issuer: "University of Mumbai",
+  //   date: "2021",
+  //   icon: <Award className="text-blue-500" />,
+  //   link: "https://mu.ac.in/"
+  // },
   {
-    title: "Bachelor's of Computer Science",
-    issuer: "University of Mumbai",
-    date: "2021",
-    icon: <Award className="text-blue-500" />,
-    link: "https://mu.ac.in/"
-  },
-  {
-    title: "MERN Stack Development",
-    issuer: "Industry Certification",
+    title: "React, NodeJS, Express & MongoDB - The MERN Fullstack Guide",
+    issuer: "Udemy",
     date: "2023",
     icon: <Award className="text-purple-500" />,
-    link: "https://mu.ac.in/"
+    link: "https://www.udemy.com/certificate/UC-ffa5562c-76fc-401b-ab82-64155cb69b93/",
   },
   {
-    title: "Advanced React Patterns",
-    issuer: "Frontend Masters / Meta",
+    title: "The Complete ReactJs Course - Basics to Advanced",
+    issuer: "Udemy",
     date: "2024",
     icon: <Award className="text-cyan-500" />,
-    link: "https://mu.ac.in/"
-  }
+    link: "https://www.udemy.com/certificate/UC-b00065d1-b746-40bd-be67-56d75ce41525/",
+  },
 ];
 
 const currentLearning = [
-  { name: "Next.js 15 & Server Components", progress: 85, status: "Advanced" },
-  { name: "TypeScript for Enterprise", progress: 60, status: "Intermediate" },
-  { name: "AI Agent Orchestration", progress: 40, status: "Explorer" }
+  {
+    name: "Full Stack Web Development With MERN STACK & GenAI 2026",
+    progress: 30,
+    status: "Advanced",
+  },
+  // { name: "TypeScript for Enterprise", progress: 60, status: "Intermediate" },
+  // { name: "AI Agent Orchestration", progress: 40, status: "Explorer" }
 ];
 
 const Learning = () => {
   return (
     <section id="learning" className="lg:py-24 py-10 px-6 max-w-7xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-        
         {/* Left Side: Completed Certifications */}
         <div>
           <div className="flex items-center lg:gap-3 gap-0.5 mb-10">
             <div className="p-3 bg-green-100 dark:bg-green-900/30 text-green-600 rounded-2xl">
               <CheckCircle size={28} />
             </div>
-            <h2 className="font-heading lg:text-5xl text-4xl">CERTIFICATIONS</h2>
+            <h2 className="font-heading lg:text-5xl text-4xl">
+              CERTIFICATIONS
+            </h2>
           </div>
 
           <div className="space-y-4">
@@ -60,21 +71,25 @@ const Learning = () => {
                       {cert.icon}
                     </div>
                     <div>
-                      <h3 className="font-bold text-slate-900 dark:text-white">{cert.title}</h3>
-                      <p className="text-sm text-slate-500">{cert.issuer} • {cert.date}</p>
+                      <h3 className="font-bold text-slate-900 dark:text-white">
+                        {cert.title}
+                      </h3>
+                      <p className="text-sm text-slate-500">
+                        {cert.issuer} • {cert.date}
+                      </p>
                     </div>
                   </div>
-                  <a 
-    href={cert.link} 
-    target="_blank" 
-    rel="noreferrer" 
-    className="p-2 hover:bg-purple-100 dark:hover:bg-purple-900/30 rounded-lg transition-colors"
-  >
-    <ExternalLink 
-      size={18} 
-      className="text-slate-300 group-hover:text-purple-500 transition-colors" 
-    />
-  </a>
+                  <a
+                    href={cert.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:bg-purple-100 dark:hover:bg-purple-900/30 hover:rounded-full transition-colors"
+                  >
+                    <ExternalLink
+                      size={18}
+                      className="text-slate-300 group-hover:text-purple-500 transition-colors rounded-full"
+                    />
+                  </a>
                 </GlassCard>
               </motion.div>
             ))}
@@ -87,12 +102,17 @@ const Learning = () => {
             <div className="p-3 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-2xl">
               <TrendingUp size={28} />
             </div>
-            <h2 className="font-heading lg:text-5xl text-4xl text-blue-600 dark:text-blue-400">UP-SKILLING</h2>
+            <h2 className="font-heading lg:text-5xl text-4xl text-blue-600 dark:text-blue-400">
+              UP-SKILLING
+            </h2>
           </div>
 
           <GlassCard className="space-y-8">
-            <p className="text-slate-500 italic">"I believe code is never finished. I am currently deep-diving into these technologies to stay ahead of the curve."</p>
-            
+            <p className="text-slate-500 italic">
+              "I believe code is never finished. I am currently deep-diving into
+              these technologies to stay ahead of the curve."
+            </p>
+
             <div className="space-y-6">
               {currentLearning.map((item, index) => (
                 <div key={index} className="space-y-2">
@@ -106,7 +126,7 @@ const Learning = () => {
                     </span>
                   </div>
                   <div className="h-2 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
-                    <motion.div 
+                    <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: `${item.progress}%` }}
                       transition={{ duration: 1, ease: "easeOut" }}
@@ -118,7 +138,6 @@ const Learning = () => {
             </div>
           </GlassCard>
         </div>
-
       </div>
     </section>
   );
