@@ -19,7 +19,7 @@ const certifications = [
   {
     title: "React, NodeJS, Express & MongoDB - The MERN Fullstack Guide",
     issuer: "Udemy",
-    date: "2023",
+    date: "2026aaa",
     icon: <Award className="text-purple-500" />,
     link: "https://www.udemy.com/certificate/UC-ffa5562c-76fc-401b-ab82-64155cb69b93/",
   },

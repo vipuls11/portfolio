@@ -3,6 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, Code2 } from 'lucide-react';
 import GlassCard from '../../components/openclaw/GlassCard';
 
+// Import images from assets
+import mernProjectImg from '../../assets/images/mernproject.png';
+import avInfoSystemImg from '../../assets/images/av-info-sytem.png';
+import openclawAiImg from '../../assets/images/openclaw-ai.png';
+import abacusImg from '../../assets/images/abacus.png';
+import jobPortalImg from '../../assets/images/job-portal.png';
+
+
 const categories = ['All', 'Web App', 'Mern', 'UI Design'];
 
 const projects = [
@@ -10,7 +18,7 @@ const projects = [
     id: 1,
     title: 'YOUR PLACE',
     category: 'Mern',
-    img: 'src/assets/images/mernproject.png',
+    img: mernProjectImg,
     tags: ['React', 'Node.js', 'MongoDB', 'Tailwind Css'],
     link: 'https://udemy-learning-project-react-mern.vercel.app',
     github: 'https://github.com/vipuls11/Udemy-learning-project-react-mern'
@@ -19,7 +27,7 @@ const projects = [
     id: 2,
     title: 'AV INFO SYSTEM',
     category: 'Web App',
-    img: 'src/assets/images/av-info-sytem.png',
+    img: avInfoSystemImg,
     tags: ['Vite', 'Tailwind'],
     link: 'https://av-info-system-16-05-2024.vercel.app',
     github: 'https://github.com/vipuls11/av-info-system-16-05-2024'
@@ -28,7 +36,7 @@ const projects = [
     id: 3,
     title: 'OPENCLAW AI',
     category: 'Web App',
-    img: 'src/assets/images/openclaw-ai.png',
+    img: openclawAiImg,
     tags: ['React', 'Material UI', 'Framer-motion'],
     link: 'https://open-claw-ai.vercel.app/',
     github: 'https://github.com/vipuls11/OpenClaw-AI'
@@ -37,7 +45,7 @@ const projects = [
     id: 4,
     title: 'SMART-ABACUS',
     category: 'Web App',
-    img: 'src/assets/images/abacus.png',
+    img: abacusImg,
     tags: ['React', 'Tailwind', 'Slick-Carousel',],
     link: 'https://smart-abacus.vercel.app',
     github: 'https://github.com/vipuls11/smart-abacus'
@@ -46,7 +54,7 @@ const projects = [
     id: 5,
     title: 'Job Portal',
     category: 'UI Design',
-    img: 'src/assets/images/job-portal.png',
+    img: jobPortalImg,
     tags: ['React'],
     link: 'https://job-portal-psi-lovat.vercel.app/job-preview',
     github: 'https://github.com/vipuls11/job-portal'
