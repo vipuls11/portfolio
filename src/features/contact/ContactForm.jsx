@@ -1,4 +1,5 @@
 import { useFormik } from 'formik';
+import axios from 'axios';
 import * as Yup from 'yup';
 import { motion } from 'framer-motion';
 import { Send, User, Mail, MessageSquare, CheckCircle } from 'lucide-react';
@@ -20,17 +21,27 @@ const ContactForm = () => {
       email: Yup.string().email('Invalid email address').required('Required'),
       message: Yup.string().min(10, 'Must be at least 10 characters').required('Required'),
     }),
-    onSubmit: async (values, { resetForm }) => {
-      // Senior Move: Here is where you'd call your MERN backend (services/api.js)
-      console.log('Form Submitted:', values);
-      
-      // Simulate API call
-      setTimeout(() => {
-        setIsSubmitted(true);
-        resetForm();
-        setTimeout(() => setIsSubmitted(false), 5000);
-      }, 1000);
-    },
+
+    
+onSubmit: async (values, { resetForm, setSubmitting }) => {
+  try {
+    const { data } = await axios.post(
+    import.meta.env.VITE_CONTACTFORM,
+      values
+    );
+
+    console.log('Success:', data);
+    setIsSubmitted(true); 
+    resetForm();
+
+    setTimeout(() => setIsSubmitted(false), 5000);
+  } catch (error) {
+    console.error(error);
+    alert('Failed to send message');
+  } finally {
+    setSubmitting(false);
+  }
+}
   });
 
   return (
