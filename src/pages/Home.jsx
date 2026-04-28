@@ -50,7 +50,7 @@ const Home = () => {
         I’ve worked on CMS platforms, dashboards, and dynamic web applications, helping businesses deliver smooth and engaging digital experiences.
         </p>
         <div className="flex space-x-4">
-          <a href="src/assets/images/vipulvishwakarma2026cv.pdf" download  target="_blank" className="bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 px-8 py-4 rounded-2xl font-bold flex items-center hover:bg-slate-800 dark:hover:bg-slate-200 transition-all">
+          <a href="/vipulvishwakarma2026cv.pdf" download  target="_blank" className="bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 px-8 py-4 rounded-2xl font-bold flex items-center hover:bg-slate-800 dark:hover:bg-slate-200 transition-all">
             View My CV <ArrowRight className="ml-2" size={20} />
           </a>
         </div>

@@ -9,7 +9,7 @@ import GlassCard from '../../components/openclaw/GlassCard';
 
 const ContactForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-
+console.log(import.meta.env.VITE_CONTACTFORM);
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -26,8 +26,8 @@ const ContactForm = () => {
 onSubmit: async (values, { resetForm, setSubmitting }) => {
   try {
     const { data } = await axios.post(
-    import.meta.env.VITE_CONTACTFORM,
-      values
+    `${import.meta.env.VITE_CONTACTFORM}/api/contact`,
+      values,
     );
 
     console.log('Success:', data);
