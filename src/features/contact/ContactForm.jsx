@@ -9,7 +9,6 @@ import GlassCard from '../../components/openclaw/GlassCard';
 
 const ContactForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-console.log(import.meta.env.VITE_CONTACTFORM);
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -30,7 +29,6 @@ onSubmit: async (values, { resetForm, setSubmitting }) => {
       values,
     );
 
-    console.log('Success:', data);
     setIsSubmitted(true); 
     resetForm();
 
